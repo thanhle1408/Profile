@@ -31,6 +31,13 @@ body {
   display: flex;
   font-family: "Open Sans", sans-serif;
 }
+input {
+  margin: 1rem 0rem;
+  color: var(--background-second);
+  background-color: transparent;
+  border-bottom: 2px solid var(--background-second);
+  width: 100%;
+}
 /* font-family: 'Baloo Paaji 2', cursive; */
 /* font-family: 'Open Sans', sans-serif; */
 .small-text {
@@ -48,7 +55,7 @@ body {
 .header-text {
   font-size: 2.5rem;
   font-weight: 600;
-  line-height: 2.8rem;
+  line-height: 2.5rem;
   letter-spacing: -1px;
   transition: all 0.3s ease;
 }
@@ -349,6 +356,42 @@ body {
   margin-left: 1rem;
 }
 
+/* contact */
+.wrapper-contact {
+  display: grid;
+  grid-template-rows: 1000px;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.message {
+  height: 100px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.submit {
+  position: relative;
+  margin-top: 10rem;
+}
+.submit::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 0;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--background-second);
+  transition: all 0.3s ease;
+}
+.submit:hover::after {
+  width: 8rem;
+}
+.f-w-4 {
+  font-weight: 400;
+}
+.img-icon {
+  width: 30px;
+  margin-right: 1rem;
+}
 /************* nav **************/
 .nav {
   flex: 3;
