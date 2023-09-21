@@ -285,6 +285,53 @@ img {
   gap: 1rem;
   flex-direction: column;
 }
+/* click GRID */
+.wrapper-grid {
+  display: grid;
+  min-width: 520px;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 1.5rem;
+  grid-template-areas:
+    "textGrid textGrid grid1 grid1 none1"
+    "grid2 grid2 grid1 grid1 none1"
+    "grid3 grid3 grid1 grid1 none1"
+    "none2 grid4 grid4 grid4 none1"
+    "none2 grid4 grid4 grid4 none1";
+}
+.text-grid {
+  grid-area: textGrid;
+  padding-left: 10px;
+}
+.img-grid-1 {
+  grid-area: grid1;
+}
+.img-grid-1 > img {
+  height: 100%;
+}
+.img-grid-2 {
+  grid-area: grid2;
+}
+.img-grid-3 {
+  grid-area: grid3;
+}
+.img-grid-4 {
+  grid-area: grid4;
+}
+.img-grid-4 > img {
+  width: 80%;
+}
+.back-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--background-dark);
+  border-radius: 10px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+.back-icon:hover {
+  transform: translateX(-10px);
+}
 
 /* skills */
 .wrapper-skills {
