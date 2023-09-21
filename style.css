@@ -38,6 +38,11 @@ input {
   border-bottom: 2px solid var(--background-second);
   width: 100%;
 }
+img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+}
 /* font-family: 'Baloo Paaji 2', cursive; */
 /* font-family: 'Open Sans', sans-serif; */
 .small-text {
@@ -179,9 +184,6 @@ input {
   overflow: hidden;
   z-index: 0;
 }
-.img-avatar img {
-  width: 100%;
-}
 
 /* about */
 .wrapper-about {
@@ -262,6 +264,29 @@ input {
 }
 
 /* portfolio */
+.wrapper-portfolio {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.wrapper-portfolio-img {
+  overflow: hidden;
+  border-radius: 1rem;
+}
+.wrapper-portfolio-img > img {
+  transform: scale(1.2);
+}
+.wrapper-portfolio-img img:hover {
+  transform: scale(1.3);
+}
+.portfolio-detail-box {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+/* skills */
 .wrapper-skills {
   display: grid;
   grid-template-rows: 1fr;
@@ -341,7 +366,8 @@ input {
   position: relative;
   display: flex;
   width: 150%;
-  overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: scroll;
   border-radius: 20px;
   -ms-overflow-style: none;
   scrollbar-width: 0;
@@ -369,8 +395,8 @@ input {
   word-break: break-all;
 }
 .submit {
+  cursor: pointer;
   position: relative;
-  margin-top: 10rem;
 }
 .submit::after {
   content: "";
@@ -383,7 +409,7 @@ input {
   transition: all 0.3s ease;
 }
 .submit:hover::after {
-  width: 8rem;
+  width: 6rem;
 }
 .f-w-4 {
   font-weight: 400;
